@@ -1,0 +1,43 @@
+header {
+  color: rgb(112, 44, 44);
+  font-size: 5vmin;
+  padding: 2vmin;
+  text-align: center;
+  width: 100%;
+}
+.board {
+  justify-content: center;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.box {
+  background: rgb(34, 138, 103);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.4vmin solid rgb(110, 142, 201);
+  color: black;
+  border-radius: 1vmin;
+  outline: none;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+}
+#replay {
+  font-size: 2vmin;
+  font-weight: bold;
+  padding: 2vmin;
+  margin-top: 4vmin;
+  border: 0.3vmin solid grey;
+  color: grey;
+  border-radius: 2vmin;
+  outline: none;
+  cursor: pointer;
+}
+#replay:hover {
+  background-color: grey;
+  color: white;
+}
