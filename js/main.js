@@ -1,6 +1,6 @@
 /*----- constants -----*/
 const lookup = {
-  null: "[ ]", //<-----could be image URLs
+  null: "ഖ", //<-----could be image URLs
   "1": "X",
   "-1": "O",
 };
