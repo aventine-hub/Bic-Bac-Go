@@ -1,24 +1,41 @@
+body {
+  background-image: url("https://i.imgur.com/HzB1I3M.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 header {
-  color: rgb(34, 86, 184);
+  color: rgb(213, 243, 124);
   font-size: 5vmin;
   padding: 2vmin;
   text-align: center;
   width: 100%;
   font-family: "Chilanka";
+  text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px yellowgreen;
+}
+h1 {
+  color: rgb(213, 243, 124);
+  font-size: 3vmin;
+  padding: 2vmin;
+  text-align: center;
+  width: 100%;
+  font-family: "Chilanka";
+  text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px yellowgreen;
 }
 .board {
-  margin-left: 10px;
+  margin: 0 15vmin;
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
   column-gap: 10px;
   row-gap: 15px;
 }
 .box {
-  background-color: rgb(99, 190, 99);
-  text-align: center;
+  background-color: rgb(113, 153, 51);
+  opacity: 0.9;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  /* justify-items: center; */
+  text-align: center;
   border: 0.4vmin solid rgb(34, 86, 184);
   color: black;
   border-radius: 1vmin;
@@ -26,7 +43,8 @@ header {
   font-family: "Chilanka";
   font-weight: bold;
   color: rgb(34, 86, 184);
-  font-size: 4em;
+  font-size: 10vmin;
+  padding-top: 3vmin;
 }
 
 .reset {
@@ -44,7 +62,9 @@ header {
   border-radius: 2vmin;
   outline: none;
   cursor: pointer;
-  /* visibility: hidden; */
+  background-color: rgb(113, 153, 51);
+  opacity: 0.9;
+  visibility: hidden;
 }
 #replay:hover {
   background-color: rgb(99, 190, 99);

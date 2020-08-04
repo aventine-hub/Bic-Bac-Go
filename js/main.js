@@ -23,6 +23,7 @@ let board, turn, winner;
 const squaresEl = document.querySelectorAll(".box");
 const message = document.querySelector("h1");
 const replayEl = document.querySelector("#replay");
+
 /*----- event listeners -----*/
 document.querySelector("#replay").addEventListener("click", init);
 document.querySelector(".board").addEventListener("click", handleMove);
@@ -33,12 +34,7 @@ function init() {
   turn = 1;
   winner = null;
   render();
-}
-
-function render() {
-  board.forEach(function (square, idx) {
-    squaresEl[idx].textContent = lookup[square];
-  });
+  replayEl.style.visibility = "hidden";
 }
 
 function handleMove(event) {
@@ -48,7 +44,40 @@ function handleMove(event) {
   }
   board[index] = turn;
   turn *= -1;
+  winner = winning();
   render();
+}
+
+function render() {
+  board.forEach(function (square, idx) {
+    squaresEl[idx].textContent = lookup[square];
+  });
+  if (winner === "T") {
+    message.innerHTML = "NONE ARE WORTHY";
+    replayEl.style.visibility = "visible";
+  } else if (winner) {
+    message.innerHTML = `${lookup[
+      winner
+    ].toUpperCase()} IS BOUND FOR GREATNESS!`;
+    replayEl.style.visibility = "visible";
+  } else {
+    message.innerHTML = `${lookup[turn].toUpperCase()} G O`;
+  }
+}
+
+function winning() {
+  for (let i = 0; i < winningCombos.length; i++) {
+    if (
+      Math.abs(
+        board[winningCombos[i][0]] +
+          board[winningCombos[i][1]] +
+          board[winningCombos[i][2]]
+      ) === 3
+    )
+      return board[winningCombos[i][0]];
+  }
+  if (board.includes(null)) return null;
+  return "T";
 }
 
 // replayEl.style.visibility = "visible";
