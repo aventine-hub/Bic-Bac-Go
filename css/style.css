@@ -1,43 +1,52 @@
 header {
-  color: rgb(112, 44, 44);
+  color: rgb(34, 86, 184);
   font-size: 5vmin;
   padding: 2vmin;
   text-align: center;
   width: 100%;
+  font-family: "Chilanka";
 }
 .board {
-  justify-content: center;
+  margin-left: 10px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   column-gap: 10px;
   row-gap: 15px;
 }
 .box {
-  background: rgb(34, 138, 103);
+  background-color: rgb(99, 190, 99);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.4vmin solid rgb(110, 142, 201);
+  border: 0.4vmin solid rgb(34, 86, 184);
   color: black;
   border-radius: 1vmin;
   outline: none;
-  font-family: Helvetica;
+  font-family: "Chilanka";
   font-weight: bold;
+  color: rgb(34, 86, 184);
   font-size: 4em;
 }
+
+.reset {
+  text-align: center;
+}
+
 #replay {
   font-size: 2vmin;
   font-weight: bold;
+  font-family: "Chilanka";
   padding: 2vmin;
   margin-top: 4vmin;
-  border: 0.3vmin solid grey;
-  color: grey;
+  border: 0.3vmin solid rgb(34, 86, 184);
+  color: rgb(34, 86, 184);
   border-radius: 2vmin;
   outline: none;
   cursor: pointer;
+  /* visibility: hidden; */
 }
 #replay:hover {
-  background-color: grey;
-  color: white;
+  background-color: rgb(99, 190, 99);
+  color: rgb(34, 86, 184);
 }
